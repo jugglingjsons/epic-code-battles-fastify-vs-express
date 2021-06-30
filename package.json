@@ -1,0 +1,22 @@
+{
+  "name": "epic-code-battles-fastify-vs-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jugglingjsons/epic-code-battles-fastify-vs-express.git",
+  "author": "jugglingjsons <jadczak.d@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start-fastify-nolog": "PORT=3000 TIMEOUT=500 node fastify/index.js",
+    "start-fastify": "PORT=3000 TIMEOUT=500 node fastify/index.js true",
+    "start-express": "PORT=3000 TIMEOUT=500 DEBUG=express:* node express/index.js",
+    "start-express-nolog": "PORT=3000 TIMEOUT=500 node express/index.js",
+    "start-go": "PORT=3000 TIMEOUT=500 go run go/main.go",
+    "cannon": "autocannon -c 100 -d10 -p 10 localhost:3000",
+    "k6-script": "k6 run k6-script.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "fastify": "^3.18.1",
+    "fastify-cli": "^2.13.0"
+  }
+}
