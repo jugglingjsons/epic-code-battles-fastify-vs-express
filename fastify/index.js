@@ -8,7 +8,7 @@ function sleep(ms) {
   });
 }
 fastify.get('/', async (request, reply) => {
-  await sleep(process.env.TIMEOUT);
+  // await sleep(process.env.TIMEOUT);
   return { hello: 'world' }
 })
 

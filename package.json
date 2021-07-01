@@ -7,10 +7,11 @@
   "license": "MIT",
   "scripts": {
     "start-fastify-nolog": "PORT=3000 TIMEOUT=500 node fastify/index.js",
-    "start-fastify": "PORT=3000 TIMEOUT=500 node fastify/index.js true",
+    "start-fastify": "PORT=3000 TIMEOUT=500 LOGS=true node fastify/index.js true",
     "start-express": "PORT=3000 TIMEOUT=500 DEBUG=express:* node express/index.js",
     "start-express-nolog": "PORT=3000 TIMEOUT=500 node express/index.js",
     "start-go": "PORT=3000 TIMEOUT=500 go run go/main.go",
+    "start-go-fiber": "PORT=3000 TIMEOUT=500 go run go-fiber/main.go",
     "cannon": "autocannon -c 100 -d10 -p 10 localhost:3000",
     "k6-script": "k6 run k6-script.js"
   },

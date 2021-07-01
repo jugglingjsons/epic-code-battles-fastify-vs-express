@@ -11,7 +11,7 @@ function sleep(ms) {
 }
 
 app.get('/', async (req, res) => {
-  await sleep(process.env.TIMEOUT)
+  // await sleep(process.env.TIMEOUT)
   res.send({hello:"world"})
 })
 
